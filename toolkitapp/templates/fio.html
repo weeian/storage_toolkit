@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIO</title>
+    <link rel="stylesheet" href="/toolkitapp/static/layui/css/layui.css" >
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header" >
+    <div class="layui-logo" href="/">
+       <a href="/index/"><img src="/toolkitapp/static/media/logo.png" style="width: 100px; height: 40px"></a>
+    </div>
+
+  </div>
+
+    <div class="layui-side layui-bg-black" >
+    <div class="layui-side-scroll" >
+        <ul class="layui-nav layui-nav-tree site-demo-nav" lay-skin="">
+            <li data-name="home" class="layui-nav-item layui-nav-itemed">
+              <a href="javascript:;" lay-tips="性能测试" lay-direction="2">
+                <cite>性能测试</cite>
+              <span class="layui-nav-more"></span></a>
+              <dl class="layui-nav-child ">
+                <dd  id="fio" class="layui-this">
+                    <a href="/fio/" >fio</a>
+                </dd>
+                <dd  id="ior">
+                  <a href="/ior/">ior</a>
+                </dd>
+                <dd  id="cosbench" >
+                  <a href="/cosbench/">cosbench</a>
+                </dd>
+                  <dd  id="vdbench" >
+                  <a href="/vdbench/">vdbench</a>
+                </dd>
+                    <dd  id="mdtest">
+                  <a href="/mdtest/">mdtest</a>
+                </dd>
+              </dl>
+            </li>
+            <li data-name="user" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="功能测试" lay-direction="2">
+                <cite>功能测试</cite>
+              <span class="layui-nav-more"></span></a>
+              <dl class="layui-nav-child">
+                <dd>
+                  <a href="/authBucket/">authBucket</a>
+                </dd>
+                  <dd>
+                  <a href="/obs-test/">obs-test</a>
+                </dd>
+              </dl>
+            </li>
+            <li data-name="user" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="接口测试" lay-direction="2">
+                <cite>接口测试</cite>
+              <span class="layui-nav-more"></span></a>
+              <dl class="layui-nav-child">
+                <dd>
+                  <a href="/BaseApiTest/">BaseApiTest</a>
+                </dd>
+              </dl>
+            </li>
+
+        </ul>
+	</div>
+
+ </div>
+
+    <div class="layui-body layui-tab-content site-demo site-demo-body" >
+    <!-- 内容主体区域 -->
+        <div class="layui-tab-item layui-show">
+            <div class="layui-main">
+                <div id="LAY_preview">
+                    <blockquote class="layui-elem-quote">FIO工具用于测试块设备读写性能及文件存储目录读写速率
+                    </blockquote>
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                        <legend>FIO测试</legend>
+                    </fieldset>
+
+                    <blockquote class="layui-elem-quote layui-quote-nm">
+                        fio 使用示例：
+                        <br><br>fio -filename=/dev/sdn -direct=1 -iodepth 100 -thread -rw=randwrite -ioengine=libaio -bs=1m -size=50G -numjobs=10 -runtime=1800 -group_reporting -name=rand_100write_1
+                    </blockquote>
+
+                    <label class="layui-form-label-col" style="margin-top: 20px">请按要求填写下列参数:</label>
+                    <hr class="layui-bg-black">
+
+                </div>
+
+                <div>
+                    <form class="layui-form layui-form-pane" style="width: 650px; ">
+                        <div class="layui-form-item" style="width: 300px; margin-top: 30px;">
+                            <label class="layui-form-label" ><label style="color: #ff191e">* &nbsp;</label>主机IP</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="hostIp" required autocomplete="off" placeholder="请输入测试主机IP" class="layui-input">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    © Copyright   weeian
+    </div>
+
+</div>
+
+<script src="/toolkitapp/static/layui/layui.all.js"></script>
+<script>
+
+
+</script>
+
+
+</body>
+</html>
